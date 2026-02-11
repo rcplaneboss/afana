@@ -16,7 +16,7 @@ export function CtaSection() {
             href="/contact"
             className="inline-flex items-center justify-center rounded-lg bg-accent px-8 py-3.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
           >
-            Donate Now
+            Support Our Mission
           </Link>
           <Link
             href="/contact"

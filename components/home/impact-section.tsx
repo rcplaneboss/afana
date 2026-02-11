@@ -1,11 +1,7 @@
 import { Users, BookOpen, Globe, HeartHandshake } from "lucide-react"
 
 const stats = [
-  {
-    icon: Users,
-    value: "5+",
-    label: "Core Focus Areas",
-  },
+ 
   {
     icon: BookOpen,
     value: "Research",

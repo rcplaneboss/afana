@@ -4,7 +4,7 @@ export function HeroSection() {
   return (
     <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden bg-primary">
       {/* Background overlay pattern */}
-      <div className="absolute inset-0 bg-[url('/images/wp/hero-banner.webp')] bg-cover bg-center opacity-30" />
+      <div className="absolute inset-0 bg-[url('/public/images/wp/hero-banner.jpg')] bg-cover bg-center opacity-30" />
       <div className="absolute inset-0 bg-primary/70" />
 
       <div className="relative z-10 mx-auto max-w-[1200px] px-6 py-32 text-center">
