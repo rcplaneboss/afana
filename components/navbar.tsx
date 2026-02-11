@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react"
 import { Menu, X, Leaf } from "lucide-react"
 import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -45,7 +46,7 @@ export function Navbar() {
             "flex h-10 w-10 items-center justify-center rounded-lg transition-colors",
             isScrolled ? "bg-primary" : "bg-primary"
           )}>
-            <Leaf className="h-5 w-5 text-primary-foreground" />
+            <Image src="/images/logo.webp" alt="AFANA Logo" width={24} height={24} className="object-contain" />
           </div>
           <span className={cn(
             "font-heading text-lg font-bold tracking-tight transition-colors",
