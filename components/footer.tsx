@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Leaf, Mail, Phone, MapPin } from "lucide-react"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -10,14 +11,14 @@ export function Footer() {
           <div className="md:col-span-1">
             <Link href="/" className="mb-4 flex items-center gap-2.5">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[hsl(153,42%,26%)]">
-                <Leaf className="h-5 w-5 text-[hsl(40,20%,90%)]" />
+                <Image src="/images/logo.webp" alt="AFANA Logo" width={24} height={24} className="object-contain" />
               </div>
               <span className="font-heading text-lg font-bold tracking-tight text-[hsl(0,0%,100%)]">
                 AFANA
               </span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-[hsl(40,20%,70%)]">
-              Championing animal welfare in Africa through research and action.
+              Advancing Research-Driven Change in Africa.
             </p>
           </div>
 
