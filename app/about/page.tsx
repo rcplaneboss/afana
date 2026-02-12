@@ -110,7 +110,7 @@ const team = [
     name: "Kaosarah Lawal",
     role: "Co-Founder",
     bio: "Kaosarah Lawal is a veterinarian with strong technical, marketing, and analytical expertise. With interests in research, advocacy, and One Health, Kaosarah focuses on using data-driven insights and digital tools to support evidence-based decision-making, public engagement, and sustainable animal and human health initiatives in Africa.",
-    image: "/images/wp/team-kaosarah.jfif",
+    image: "/images/wp/team-kaosarah.png",
   },
 ]
 
