@@ -135,7 +135,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="bg-background py-20 md:py-28">
+      {/* <section className="bg-background py-20 md:py-28">
         <div className="mx-auto max-w-[1200px] px-6">
           <div className="grid items-center gap-12 md:grid-cols-2">
             <div>
@@ -179,7 +179,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Our Values */}
       <section className="bg-muted py-20 md:py-28">

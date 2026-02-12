@@ -9,7 +9,7 @@ export function AboutPreview() {
           {/* Image */}
           <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
             <Image
-              src="/images/wp/hero-banner.webp"
+              src="/images/wp/focus-capacity.webp"
               alt="AFANA team working with animals in Africa"
               fill
               className="object-cover"
