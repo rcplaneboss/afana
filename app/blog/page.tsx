@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { Calendar, User, ArrowRight, Tag } from "lucide-react"
+import { getPosts } from "../actions/blog"
 
 export const metadata: Metadata = {
   title: "Blog | AFANA Animal Futures",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 }
 
 
-const posts = [
+const _posts = [
   {
     id: 1,
     title: "Bridging the Gap: One Health in Rural Nigeria",
@@ -85,7 +86,11 @@ const posts = [
   },
 ]
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  let posts = await getPosts()
+  
+  if (!posts.length) posts = _posts // Fallback to hardcoded posts if DB is empty
+
   const featuredPost = posts[0]
   const recentPosts = posts.slice(1)
 
