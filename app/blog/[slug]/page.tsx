@@ -3,14 +3,17 @@ import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { Calendar, User, ArrowLeft, Share2 } from "lucide-react"
-import type { Metadata, ResolvingMetadata } from "next"
+import type { Metadata } from "next"
 
-// Dynamic Metadata for SEO based on the post
-export async function generateMetadata(
-  { params }: { params: { slug: string } },
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-  const post = await getPostBySlug(params.slug)
+type Props = {
+  params: Promise<{ slug: string }>
+}
+
+// Dynamic Metadata for SEO
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const post = await getPostBySlug(slug)
+  
   if (!post) return { title: 'Post Not Found' }
 
   return {
@@ -19,14 +22,15 @@ export async function generateMetadata(
   }
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = await getPostBySlug(params.slug)
+export default async function BlogPostPage({ params }: Props) {
+  // Await params for Next.js 15 compatibility
+  const { slug } = await params
+  const post = await getPostBySlug(slug)
 
   if (!post) {
     notFound()
   }
 
-  // Format the date nicely
   const formattedDate = new Date(post.createdAt).toLocaleDateString('en-US', {
     month: 'long',
     day: 'numeric',
@@ -69,7 +73,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       {/* Featured Image */}
       {post.image && (
         <div className="mx-auto mt-12 max-w-[1000px] px-6">
-          <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-muted shadow-sm">
+          <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-muted shadow-sm border border-border/50">
             <Image
               src={post.image}
               alt={post.title}
@@ -83,14 +87,14 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
       {/* Article Content */}
       <div className="mx-auto mt-12 max-w-[800px] px-6">
-        <div className="prose prose-lg prose-slate max-w-none text-muted-foreground">
-          {/* whitespace-pre-wrap ensures that line breaks from your textarea are respected */}
+        <div className="prose prose-lg prose-slate max-w-none">
+          {/* whitespace-pre-wrap ensures line breaks from textarea render as paragraphs */}
           <div className="whitespace-pre-wrap leading-relaxed text-base md:text-lg text-foreground/90">
             {post.content}
           </div>
         </div>
 
-        {/* Footer / Share (Optional UI addition) */}
+        {/* Footer / Share */}
         <div className="mt-16 flex items-center justify-between border-t border-border pt-8">
           <p className="text-sm font-medium text-foreground">
             Thanks for reading.

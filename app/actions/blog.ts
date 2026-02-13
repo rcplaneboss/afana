@@ -18,8 +18,9 @@ export async function getPosts() {
 // app/actions/blog.ts
 
 export async function getPostBySlug(slug: string) {
-  return await prisma.post.findFirst({
-    where: { slug },
+  
+  return await prisma.post.findFirst({ 
+    where: { slug: slug },
   })
 }
 
