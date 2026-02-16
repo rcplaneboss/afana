@@ -9,7 +9,7 @@ export function HeroSection() {
 
       <div className="relative z-10 mx-auto max-w-[1200px] px-6 py-32 text-center">
         <p className="mb-4 font-sans text-sm font-semibold uppercase tracking-widest text-accent">
-          Championing Animal Welfare in Africa
+          Advancing Research-Driven Change in Africa
           
         </p>
         <h1 className="font-heading text-4xl font-bold leading-tight text-primary-foreground md:text-5xl lg:text-6xl text-balance">
