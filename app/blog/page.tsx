@@ -11,85 +11,44 @@ export const metadata: Metadata = {
 }
 
 
-const _posts = [
-  {
-    id: 1,
-    title: "Bridging the Gap: One Health in Rural Nigeria",
-    excerpt:
-      "exploring how integrated health interventions are reducing disease transmission between livestock and farming families in Kwara State.",
-    category: "Research",
-    author: "Farhan Rhidor Akorede",
-    date: "Oct 12, 2025",
-    readTime: "5 min read",
-    image: "/images/wp/blog-one-health.webp", // Replace with your actual image paths
-    slug: "bridging-the-gap-one-health",
-  },
-  {
-    id: 2,
-    title: "The Economic Case for Animal Welfare",
-    excerpt:
-      "Why better treatment of farmed animals isn't just ethical—it's profitable. An analysis of yield improvements in humane poultry systems.",
-    category: "Advocacy",
-    author: "Kaosarah Lawal",
-    date: "Sep 28, 2025",
-    readTime: "4 min read",
-    image: "/images/wp/blog-economics.webp",
-    slug: "economic-case-animal-welfare",
-  },
-  {
-    id: 3,
-    title: "Community Spotlight: The Women Transforming Dairy",
-    excerpt:
-      "Meet the cooperative of women farmers who are adopting sustainable grazing practices and revolutionizing local milk production.",
-    category: "Community",
-    author: "AFANA Team",
-    date: "Sep 15, 2025",
-    readTime: "3 min read",
-    image: "/images/wp/blog-community.webp",
-    slug: "women-transforming-dairy",
-  },
-  {
-    id: 4,
-    title: "Understanding Antimicrobial Resistance (AMR)",
-    excerpt:
-      "A deep dive into our latest findings on antibiotic usage patterns in peri-urban livestock centers and the implications for public health.",
-    category: "Education",
-    author: "Farhan Rhidor Akorede",
-    date: "Aug 30, 2025",
-    readTime: "8 min read",
-    image: "/images/wp/blog-amr.webp",
-    slug: "understanding-amr",
-  },
-  {
-    id: 5,
-    title: "5 Simple Steps for Better Goat Health",
-    excerpt:
-      "Practical, low-cost strategies for smallholder farmers to improve the immunity and longevity of their herds.",
-    category: "Capacity Building",
-    author: "Kaosarah Lawal",
-    date: "Aug 10, 2025",
-    readTime: "6 min read",
-    image: "/images/wp/blog-goats.webp",
-    slug: "better-goat-health",
-  },
-  {
-    id: 6,
-    title: "2025 Annual Symposium Recap",
-    excerpt:
-      "Key takeaways from our gathering of veterinarians, policymakers, and farmers discussing the future of African agriculture.",
-    category: "Events",
-    author: "AFANA Team",
-    date: "Jul 22, 2025",
-    readTime: "3 min read",
-    image: "/images/wp/blog-event.webp",
-    slug: "symposium-recap",
-  },
-]
-
 export default async function BlogPage() {
   let posts = await getPosts()
   
-  if (!posts.length) posts = _posts // Fallback to hardcoded posts if DB is empty
+ if (!posts.length) {
+    return (
+      <section className="flex min-h-[70vh] items-center justify-center bg-background px-6">
+        <div className="mx-auto max-w-[600px] text-center">
+          <div className="mb-8 flex justify-center">
+            <div className="relative">
+              <div className="absolute -inset-1 rounded-full bg-accent/20 blur-lg animate-pulse" />
+              <div className="relative flex h-20 w-20 items-center justify-center rounded-full bg-muted text-accent">
+                <Calendar className="h-10 w-10" />
+              </div>
+            </div>
+          </div>
+          
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Coming Soon to the Blog
+          </h2>
+          
+          <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+            We're currently in the field gathering stories and finalizing our latest research. 
+            Check back soon for insights on animal welfare and One Health.
+          </p>
+
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <Link
+              href="/"
+              className="inline-flex h-11 items-center justify-center rounded-lg bg-primary px-8 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            >
+              Return Home
+            </Link>
+           
+          </div>
+        </div>
+      </section>
+    )
+  }
 
   const featuredPost = posts[0]
   const recentPosts = posts.slice(1)

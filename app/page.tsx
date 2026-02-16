@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <AboutPreview />
+      {/* <AboutPreview /> */}
       <ProgramsSection />
       <ImpactSection />
       <CtaSection />

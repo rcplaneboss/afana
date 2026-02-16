@@ -134,53 +134,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Story */}
-      {/* <section className="bg-background py-20 md:py-28">
-        <div className="mx-auto max-w-[1200px] px-6">
-          <div className="grid items-center gap-12 md:grid-cols-2">
-            <div>
-              <p className="mb-2 font-sans text-sm font-semibold uppercase tracking-widest text-accent">
-                Our Story
-              </p>
-              <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl text-balance">
-                How It All Began
-              </h2>
-              <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-                AFANA Animal Futures was born out of a shared conviction that
-                animal welfare in Africa deserves far greater attention,
-                investment, and action. Founded by two veterinarians passionate
-                about bridging the gap between science and practice, our
-                organisation emerged from years of frontline experience with
-                farmed animals, rural communities, and public health challenges
-                across Nigeria.
-              </p>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                We witnessed firsthand how the well-being of animals is deeply
-                intertwined with human health, livelihoods, and the
-                environment. Yet too often, animal welfare remains
-                under-resourced and overlooked in development agendas. AFANA was
-                created to change that narrative — championing humane treatment,
-                evidence-based interventions, and community-driven solutions
-                that benefit people, animals, and the planet.
-              </p>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                Today, we work across research, advocacy, capacity building, and
-                public education to advance a future where animals in Africa are
-                treated with dignity and compassion.
-              </p>
-            </div>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-              <Image
-                src="/images/wp/hero-banner.webp"
-                alt="AFANA team working with animals in a rural African community"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section> */}
-
+     
       {/* Our Values */}
       <section className="bg-muted py-20 md:py-28">
         <div className="mx-auto max-w-[1200px] px-6">
@@ -254,51 +208,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values / Focus Areas */}
-      <section className="bg-muted py-20 md:py-28">
-        <div className="mx-auto max-w-[1200px] px-6">
-          <div className="text-center">
-            <p className="mb-2 font-sans text-sm font-semibold uppercase tracking-widest text-accent">
-              What We Do
-            </p>
-            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl text-balance">
-              Our Core Focus Areas
-            </h2>
-          </div>
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {values.map((item) => {
-              const Icon = item.icon
-              return (
-                <div
-                  key={item.title}
-                  className="group flex flex-col overflow-hidden rounded-xl bg-card shadow-sm"
-                >
-                  <div className="relative aspect-[16/10] overflow-hidden">
-                    <Image
-                      src={item.image || "/placeholder.svg"}
-                      alt={item.title}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="flex flex-1 flex-col p-8">
-                    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                      <Icon className="h-5 w-5 text-primary" />
-                    </div>
-                    <h3 className="font-heading text-lg font-semibold text-foreground">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
+     
       {/* Team */}
       <section className="bg-background py-20 md:py-28">
         <div className="mx-auto max-w-[1200px] px-6">
