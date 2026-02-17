@@ -18,13 +18,13 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "(123) 456-7890",
-    href: "tel:+11234567890",
+    value: "+234 813 635 1989",
+    href: "tel:+2348136351989",
   },
   {
     icon: MapPin,
     label: "Address",
-    value: "123 Example Street\nSan Francisco, CA 12345",
+    value: "Kano, Nigeria",
     href: null,
   },
   {
@@ -128,7 +128,7 @@ export default function ContactPage() {
             <div className="lg:col-span-3">
               <div className="rounded-xl bg-card p-8 shadow-sm md:p-10">
                 <h2 className="font-heading text-2xl font-bold text-foreground">
-                  Send Us a Message
+                  Subscribe to our newsletter
                 </h2>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Fill out the form below and we will get back to you as soon as
