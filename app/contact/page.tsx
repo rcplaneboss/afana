@@ -12,14 +12,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hi@mygroovydomain.com",
-    href: "mailto:hi@mygroovydomain.com",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+234 813 635 1989",
-    href: "tel:+2348136351989",
+    value: "info.afnanimals.org",
+    href: "mailto:info.afnanimals.org",
   },
   {
     icon: MapPin,
