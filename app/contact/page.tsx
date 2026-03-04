@@ -12,13 +12,13 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "info.afnanimals.org",
-    href: "mailto:info.afnanimals.org",
+    value: "info@afananimals.org",
+    href: "mailto:info@afananimals.org",
   },
   {
     icon: MapPin,
     label: "Address",
-    value: "Kano, Nigeria",
+    value: "Kaduna, Nigeria",
     href: null,
   },
   {
@@ -122,7 +122,7 @@ export default function ContactPage() {
             <div className="lg:col-span-3">
               <div className="rounded-xl bg-card p-8 shadow-sm md:p-10">
                 <h2 className="font-heading text-2xl font-bold text-foreground">
-                  Subscribe to our newsletter
+                  Contacting Us
                 </h2>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Fill out the form below and we will get back to you as soon as
@@ -133,6 +133,10 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="flex justify-center items-center w-full py-20 max-md:px-4">
+        <iframe src="https://afanaanimals.substack.com/embed" width="480" height="320" style={{ border: '1px solid #EEE', background: 'white' }} frameBorder="0" scrolling="no"></iframe>
       </section>
     </>
   )
