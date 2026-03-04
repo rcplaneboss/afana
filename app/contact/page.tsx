@@ -136,6 +136,9 @@ export default function ContactPage() {
       </section>
 
       <section className="flex justify-center items-center w-full py-20 max-md:px-4">
+        <h1 className="font-heading text-3xl font-bold text-foreground mb-8">
+          Subscribe to Our Newsletter
+        </h1>
         <iframe src="https://afanaanimals.substack.com/embed" width="480" height="320" style={{ border: '1px solid #EEE', background: 'white' }} frameBorder="0" scrolling="no"></iframe>
       </section>
     </>
