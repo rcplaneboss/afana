@@ -139,7 +139,7 @@ export default function ContactPage() {
         <h3 className="font-heading text-3xl font-bold text-foreground mb-8 text-center">
           Subscribe to Our Newsletter
         </h3>
-        <iframe src="https://afanaanimals.substack.com/embed" width="480" height="320" style={{ border: '1px solid #EEE', background: 'white' }} frameBorder="0" scrolling="no"></iframe>
+        <iframe src="https://afanaanimals.substack.com/embed" className="w-full" height="320" style={{ border: '1px solid #EEE', background: 'white' }} frameBorder="0" scrolling="no"></iframe>
       </section>
     </>
   )

@@ -16,6 +16,23 @@ export default async function BlogPage() {
   
  if (!posts.length) {
     return (
+      <>
+
+      <section className="bg-primary pt-32 pb-20 md:pb-28">
+        <div className="mx-auto max-w-[1200px] px-6 text-center">
+          <p className="mb-2 font-sans text-sm font-semibold uppercase tracking-widest text-accent">
+            Our Blog
+          </p>
+          <h1 className="font-heading text-4xl font-bold text-primary-foreground md:text-5xl text-balance">
+            Insights & Updates
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80">
+            Exploring the intersection of animal welfare, public health, and
+            sustainable development through research and stories from the field.
+          </p>
+        </div>
+      </section>
+
       <section className="flex min-h-[70vh] items-center justify-center bg-background px-6">
         <div className="mx-auto max-w-[600px] text-center">
           <div className="mb-8 flex justify-center">
@@ -47,6 +64,7 @@ export default async function BlogPage() {
           </div>
         </div>
       </section>
+      </>
     )
   }
 
