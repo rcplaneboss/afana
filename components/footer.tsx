@@ -49,7 +49,7 @@ export function Footer() {
               <div className="flex items-start gap-3">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-[hsl(42,50%,50%)]" />
                 <span className="text-sm text-[hsl(40,20%,70%)]">
-                  info@afnanimals.org
+                  info@afananimals.org
                 </span>
               </div>
               
